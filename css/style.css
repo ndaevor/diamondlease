@@ -1,0 +1,1790 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    font-family: 'poppins';
+}
+
+body{
+    margin: 10px;
+    height: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    overflow: visible;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.social-links{
+    display: flex;
+    width: 100%;
+    height: 15px;
+    justify-content: flex-end;
+    column-gap: 16px;
+}
+
+.social-links i{
+    font-size: 16px;
+}
+
+.logo{
+    width: 100%;
+    height: 54px;
+}
+
+.logo-img{
+    width: calc(25vw);
+}
+
+
+/* Nav bar */
+
+nav{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    column-gap: calc(2.1vw);
+    padding: 0;
+}
+
+ul .messages-li{
+    width: 20px;
+}
+
+ul li{
+    height: 23px;
+    width: calc(5.54vw);
+    margin: 0;
+    padding: 0;
+    font-size: calc(0.9vw);
+}
+
+ul li a{
+    max-width: fit-content;
+}
+
+.messages,.profile{
+    display: flex;
+    flex-direction: row;
+    height: 29px;
+}
+
+.messages{
+    position: relative;
+    max-width: fit-content !important;
+}
+
+.bell{
+    font-size: 29px;
+}
+
+.notification-count{
+    position: absolute;
+    bottom: 12px;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #38b000;
+    color: #fff;
+    font-size: 12px;
+    border: 2px solid #fff;
+    height: 13px;
+    width: 13px;
+    border-radius: 13px;
+}
+
+.profile{
+    background-color: #000;
+    color: #fff;
+    font-size: calc(1vw);
+    text-align: center;
+    width: calc(7.9vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    column-gap: 5px;
+}
+
+.profile-pic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+}
+
+/* Nav bar ends */
+
+.notice-data{
+    font-size: 10px;
+    color: #adb5bd;
+    margin: 0; 
+}
+
+
+/* slid in buttons */
+.slide-in-button-1{
+    position: absolute;
+    right: 0;
+    overflow-x: hidden;
+    top: 151px;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 20px 20px 0px;
+    margin-right: 5px;
+    border-radius: 20px 0px 0px 20px;
+    background: transparent;
+    transition: width 0.3s ease;
+    
+}
+
+
+.slide-in-contents{
+    background-color: #fff;
+    height: 45px;
+    width: 200px;
+    display: flex;
+    border-radius: 20px;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 20px;
+    flex-direction: row;
+    outline: none;
+    border: none;
+}
+
+.slide-in-contents img{
+    margin-left: 10px;
+    border-radius: 20px;
+    height: 25px;
+    width: 25px;
+}
+
+.slide-in-contents p{
+    margin: 0;
+}
+
+
+.slide-in-button-2{
+    position: absolute;
+    right: 0;
+    overflow-x: hidden;
+    top: 220px;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 20px 20px 0px;
+    margin-right: 5px;
+    border-radius: 20px 0px 0px 20px;
+    background: transparent;
+    transition: width 0.3s ease;
+}
+
+
+
+
+
+
+/* Quick pickup  */
+.quick-pickup{
+    width: 100%;
+    height:197px;
+    margin-top: 30px;
+    background-image: url("../images/red.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 19px;
+    
+}
+
+.pickup-options{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    font-size: calc(1vw);
+    padding-left: 81px;
+    color: #fff;
+}
+
+.vehicle-type{
+    cursor: pointer;
+    font-size: calc(1vw);
+    background-color: #ffffff33;
+    color: #fff;
+    border: none;
+    padding: 3px;
+    border-radius: 15px;
+}
+
+option {
+    color: #000;
+    font-size: 12px;
+}
+
+
+
+.pickup-link{
+    all: unset;
+    color: #c0baba;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.pickup-link:focus{
+    color: #fff;
+}
+
+.pickup-link:focus .line{
+    display: block;
+}
+
+.line{
+    display: none;
+    width: 100%;
+    border-radius: 2px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.additional-details{
+    padding-left: calc(5.6vw);
+    column-gap: calc(1vw);
+    display: flex;
+    flex-direction: row;
+    height: 42px;
+    width: max-content;
+}
+
+.location, .pickup-time{
+    font-size: calc(.83vw);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #fff;
+    height: 100%;
+    width: calc(13vw);
+}
+
+
+
+.location select{
+    margin-right: 10px;
+}
+
+
+
+.map-pin{
+    padding: 15px;
+    color: #38b000;
+}
+.location-list{
+    background-color: transparent;
+    border: none;
+    outline: revert;
+    color:#000;
+    width: 100%;
+}
+.location img{
+    width: 9px;
+    height: 12px;
+}
+
+
+.pickup-time{
+    position: relative;
+    column-gap: 10px;
+}
+
+.calender-icon{
+    width: 10px;
+    height: 10px;
+}
+
+.date-time{
+    display: flex;
+    column-gap: 10px;
+}
+
+
+
+
+
+/* Hidden date-time picker container */
+
+.date-time-picker, .arrival-date-time-picker {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.date-time-picker input, .arrival-date-time-picker input {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.date-time-picker button, .arrival-date-time-picker button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+}
+/* Hidden date-time picker container over */
+
+/* search button */
+.search-button{
+    height: 42px;
+    width: calc(4.4vw);
+    background-color: #fff;
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+}
+
+.search-button button,.quick-book button{
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    transition: color 0.4s;
+}
+
+
+/* vertical line */
+.vertical-line{
+    height: 42px;
+    width: 2px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+/* Quick book */
+
+.quick-book button{
+    border-radius: 20px;
+    width: calc(16vw);
+    border: 2px solid #fff;
+    transition: background-color 0.4s;
+}
+
+.quick-book button:hover{
+    background-color: #fff;
+    color: #d00000;
+}
+
+/* download app section */
+.download-links{
+    padding-left: 81px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: calc(1vw);
+}
+
+.download-description{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 200;
+}
+
+
+/* carousal styles */
+.carousel {
+    margin-top: 8px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* Carousel slides container */
+.carousel-inner {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual slide */
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    height: 405px; /* Adjust as needed */
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Indicators (dots) */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.carousel-indicators div {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-indicators .active {
+    background-color: #007BFF;
+}
+
+/* Text overlay */
+.carousel-caption {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.carousel-caption button{
+    width: 153px;
+    height: 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 32px;
+    text-align: center;
+    background-color: #009046;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+}
+
+.carousel-caption p {
+    font-size: 18px;
+    width: 443px;
+    color: white;
+}
+
+
+
+
+
+/* Cards section */
+.car-cards {
+    margin-top: 41px;
+    text-align: center;
+}
+
+.car-cards h2 {
+    font-size: calc(2.43vw);
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.popular-cars {
+    display: flex;
+    flex-direction: row;
+    cursor: grab;
+    flex-wrap: nowrap;
+    column-gap: 22px;
+    width: 100%; /* Make sure this width is fixed or relative to the viewport */
+    position: relative;
+    height: 100%;
+    overflow-x: auto; /* Ensure 'auto' to trigger scrolling when needed */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* For momentum scrolling on iOS */
+    scrollbar-width: none; /* Firefox - hide scrollbar */
+}
+
+.popular-cars::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera - hide scrollbar */
+}
+
+.card {
+    width: calc(51.72vw); /* Use min-width instead of width */
+    height: calc(20.1vw);
+    background-color: #fff;
+    border: 1px solid #D9D9D9;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    user-select: none;
+    scroll-snap-align: start;
+}
+
+
+.card img {
+    width: calc(25vw);
+    height:calc(20.1vw);
+    object-fit: cover;
+    pointer-events: none;
+}
+
+
+
+
+
+.card-description{
+    margin-left:calc(2.7vw);
+    margin-top: 0;
+    margin-right: calc(2.7vw);
+}
+
+.card-description h3{
+    font-size: calc(1.93vw);
+    font-weight: 500;
+}
+
+.card-description p{
+    font-size: calc(0.83vw);
+    text-align: left;
+}
+
+.rate-and-book{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    column-gap: calc(4.44vw);
+}
+
+.rate-and-book h2{
+    font-size: calc(0.97vw);
+    font-weight: 600;
+}
+
+.rate-and-book button{
+    padding: 0;
+    width: 60px;
+    font-size: 11px;
+    height: 25px;
+    background-color: #E21E26;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+}
+
+
+.car-details{
+    display: flex;
+    flex-direction: row;
+    width:  calc(20vw);
+    column-gap: calc(1.38vw);
+    font-size: 6px;
+    overflow-x: hidden;
+}
+
+.car-details img{
+    width: 10px;
+    height: 15px;
+}
+
+.car-details div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 5px;
+    width: max-content;
+}
+
+.car-details div p{
+    margin: 0;
+    font-size: 11px;
+}
+
+
+
+
+/* Subscribe section */
+.subscribe{
+    margin-top: calc(2.77vw);
+    margin-left: calc(2vw);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.offers-subscribe{
+    margin-left: calc(7vw);
+    margin-top: calc(5.41vw);
+    display: flex;
+    flex-direction: column;
+}
+
+.offers-subscribe h2{
+    width: calc(38.19vw);
+    font-size: calc(2.36vw);
+    font-weight: 300;
+    margin: 0;
+}
+
+.subscribe-form{
+    margin-top: calc(2.84vw);
+}
+
+.subscribe-form div{
+    display: flex;
+    flex-direction: row;
+}
+
+.name-email{
+    display: flex;
+    flex-direction: column;
+    column-gap: calc(1.25vw);
+}
+
+.name-email input{
+    outline: none;
+    border: none;
+    width: calc(15.48vw);
+    height: calc(3.125vw);
+    padding: 5px;
+    background-color: #F8F8F8;
+    border-radius: 5px;
+}
+
+.name input:focus .name label{
+    display: block;
+}
+
+.subscribe-para{
+    width: calc(33.194vw);
+    height: calc(2.91vw);
+    font-size: calc(0.97vw);
+    font-weight: 300;
+}
+
+.subscribe-form button{
+    width: calc(33.19vw);
+    height: calc(4.07vw);
+    outline: none;
+    border: none;
+    background-color: #E21E26;
+    border-radius: 5px;
+    color: #fff;
+    font-size: calc(1.12vw);
+    font-weight: 400;
+}
+
+.app-downloadLink{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #E21E26;
+    width: 100%;
+    height: calc(35.13vw);
+}
+.app-downloadLink img{
+    margin: calc(3.33vw);
+    width: calc(16.04vw);
+    height: calc(28.95);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+
+
+.link-share{
+    display: flex;
+    flex-direction: column;
+}
+
+.link-share p{
+    width: calc(16.18vw);
+    height: calc(2.98vw);
+    color: #fff;
+    font-size: calc(0.97vw);
+    font-weight: 400;
+}
+
+.link-share input{
+    width: calc(16vw);
+    font-size: 8px;
+    height: calc(3.125vw);
+    border-radius: 5px;
+    padding-left: 8px;
+    outline: none;
+    border: none;
+}
+
+.link-share button{
+    margin-top: calc(1.66vw);
+    width: calc(10vw);
+    height: calc(2.91vw);
+    border: none;
+    outline: none;
+    background-color: #000;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.playstore-appstore{
+    display: inline-flex;
+    column-gap: calc(0.5vw);
+}
+
+.playstore-appstore p{
+    height: 21px;
+}
+.playstore-appstore img{
+    margin: 0;
+    width: calc(7.152vw);
+    height: calc(2.08vw);
+}
+
+
+
+
+/* Section rental steps */
+.rental-steps{
+    margin-top: calc(2.77vw);
+    padding: 0;
+    text-align: center;
+}
+
+.rental-steps h2{
+    font-size: calc(2.36vw);
+    font-weight: 400;
+}
+
+.three-steps{
+    display: flex;
+    flex-direction: row;
+    column-gap: calc(3.47vw);
+    justify-content: center;
+}
+
+.steps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-id{
+    width: calc(4.44vw);
+    height: calc(3.61vw);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    font-size: calc(2.77vw);
+    color: #E21E26;
+}
+
+.step-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(24.16vw);
+    height: calc(12.36vw);
+    border: 2px solid #000;
+}
+
+.step-block img{
+    width: calc(3.194vw);
+    height: calc(3.194vw);
+    margin-top: 16px;
+}
+
+.step-block p{
+    justify-content: space-around;
+    text-align: center;
+    font-size: 12px;
+    padding: 16px;
+}
+
+
+/* section avialable locations*/
+
+
+.avialable-locations{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    background-color: #000;
+    width: 100%;
+    height: calc(20.83vw);
+    color: #fff;
+}
+
+.avialable-locations h2{
+    margin-top: calc(3.88vw);
+    font-size: calc(2.21vw);
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.our-locations{
+    margin-top: calc(5.55vw);
+    display: flex;
+    height: calc(20.83vw);
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.our-locations .vertical-line{
+    height: calc(2.847vw);
+    width: 1px;
+    background-color: #ffffff34;
+}
+
+.each-location{
+    width: calc(13.99vw);
+    height: 29px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    column-gap: calc(1.2vw);
+    margin-left: calc(2.36vw);
+}
+
+.each-location img{
+    width: 22px;
+    height: 28px;
+}
+
+.each-location p{
+    font-size: calc(1.38vw);
+    font-weight: 300;
+}
+
+@media max-width {
+    
+}
+
+
+
+/* FAQ section */
+.FAQ{
+    margin-top: 56px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+.faq-container {
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: calc(2.36vw);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.faq-question span {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.faq-toggle {
+    font-size: calc(1.66vw);
+    font-weight: 300;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.faq-answer p {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+
+/* Footer section */
+
+.footer{
+    margin-top: calc(8.33vw);
+    position: relative;
+    width: 100vw;
+    min-height: fit-content;
+    max-height: 303px;
+    background-color: #000;
+    left: -60px;
+    right: -50px;
+    bottom: -50px;
+    overflow: hidden;
+}
+
+
+
+.footer-container {
+    margin-left: calc(5.55vw);
+    margin-right: calc(5.55vw);
+    padding-top: calc(2.77vw);
+    height: calc(13.88)vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.footer-logo {
+    max-width: calc(13.888vw);
+    flex-shrink: 0;
+}
+
+.footer-logo img {
+    width: calc(3.95vw);
+    height: calc(4.58vw);
+    margin-bottom: 10px;
+}
+
+.footer-logo p{
+    color: #fff;
+    font-size: calc(0.83vw);
+    margin: 0;
+    width: calc(7.28vw);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: calc(15.97vw);
+}
+
+.footer-column {
+    margin: 0;
+}
+
+.footer-column ul {
+    display: grid;
+    grid-template-columns: repeat(4,calc(8.33vw));
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    font-size: calc(0.9vw);
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a ,.AlHabthoor-companyList ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: calc(0.91vw);
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.AlHabthoor-companyList{
+    height: calc(3.95vw);
+}
+
+.AlHabthoor-companyList p{
+    font-size: calc(0.9vw);
+    margin: 0;
+    color: #fff;
+}
+
+
+.AlHabthoor-companyList ul{
+    margin-top: calc(1vw);
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    column-gap: calc(1.45vw);
+}
+
+.AlHabthoor-companyList ul li{
+    font-size: calc(0.9vw);
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-media ul {
+    list-style: none;
+    display: inline;
+    display: flex;
+    margin: 0;
+    
+}
+
+.social-media p{
+    font-size: calc(1vw);
+    color: #fff;
+    margin-bottom: calc(0.69vw);
+}
+
+.social-media ul li{
+    padding: 0px;
+    width: 8px;
+    
+
+}
+
+
+
+
+.footer-certificates{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer-certificates img {
+    width: 60px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #444;   
+}
+
+.footer-bottom p {
+    color: #fff;
+    
+    font-size: 14px;
+}
+
+
+
+/* Media queries for mobile */
+@media(max-width : 500px){
+
+    body{
+        padding: 0px 10px 0px 10px;
+        margin: 0;
+        width: 100%;
+        overflow-x: hidden !important;
+    }
+
+
+    /* Navigation menu for  mobile */
+    .nav-active{
+        z-index: 30;
+        color: #000;
+        display: flex !important;
+        flex-direction: column;
+        width: 350px;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 800px;
+        padding: 20px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .close-btn {
+        float: left;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        background-color: #000;
+        border: none;
+        border-radius: 30px;
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        cursor: pointer;
+        right: 10px;
+        position: absolute;
+    }
+    
+    .menu-list {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        padding: 0;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+    
+    .menu-list li {
+        margin-left: 20px;
+        padding: 15px 0;
+        border-bottom: 1px solid #eaeaea;
+        cursor: pointer;
+        width: 100%;
+        font-size: 20px !important;
+    }
+    
+    .login-btn {
+        background-color: black;
+        margin-left: 20px;
+        color: white;
+        padding: 15px;
+        width: 200px;
+        border: none;
+        border-radius: 20px;
+        font-size: 16px;
+        cursor: pointer;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+    }
+    
+
+    
+    /* social bar hided */
+    .social-links{
+        display: none;
+    }
+
+
+    /* nav bar hided */
+    .nav-options ul{
+        display: none;
+    }
+
+
+    /* logo width */
+    .logo{
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    /* logo img  */
+    .logo-img{
+        width: 200px;
+    }
+
+    /* hamburger menu */
+    .nav-control{
+        display: flex !important;
+        width: 30px;
+        height: 30px;
+    }
+
+    /* booking section width */
+    .booking-section{
+        width: 100%;
+    }
+
+    .slide-in-button-1,.slide-in-button-2{
+        left: calc(100vw - 20px);
+        z-index: 20;
+        transition: width 0.4s ease, left 0.4s ease;
+    }
+
+    .slide-in-button-1:hover ,.slide-in-button-2:hover{
+        width: 400px;
+        left: 150px;
+    }
+
+    /* section with red back ground */
+    .quick-pickup{
+        width: 100%;
+        height: 120px;
+    }
+    
+    /* Hided pickup 0ptions for now */
+    .pickup-options,.additional-details{
+        display: none;
+    }
+
+    /* download links */
+    .download-links{
+        font-size: 13px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* booking buttons for mobile */
+    .booking-buttons-for-mobile{
+        margin: 16px 0 16px 0;
+        width: 100%;
+        justify-content: center;
+        display: flex !important;
+        column-gap: 8px;
+
+    }
+
+    
+
+    /* Book car buttons  */
+    .booking-buttons-for-mobile button,  .search-vehicle{
+        background-color: #fff;
+        border: 2px solid #E21E26;
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: 4px;
+        color: #E21E26;
+        outline: none;
+        width: 160px;
+        height: 38px;
+    }
+
+    .search-vehicle{
+        background-color: #E21E26;
+        color: #fff;
+    }
+
+    .booking-buttons-for-mobile .book-a-car-active{
+        background-color: #E21E26;
+        color: #fff;
+    }
+    
+    /* pickup options for mobile */
+    .mobile-pickup-options{
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 10px;
+    }
+
+    /* primary details of pickup */
+    .primary-pickup-details{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .primary-pickup-details span{
+        font-size: 12px;
+        color: #4946468c;
+    }
+
+    /* pickup location preference  */
+    .pickup-location-active{
+        color: #000 !important;
+        border-bottom: 2px solid #000;
+    }
+
+    /* vehicle selector */
+    .vehicle-type{
+        font-size: 12px;
+        color: #000;
+        outline: none;
+    }
+
+    /* location selector an date picker */
+    .location, .pickup-time{
+        width: 100% !important;
+        background-color: #F6F7F9;
+        border-radius: 8px;
+    }
+
+    .pickup-time{
+        height: 42px;
+        font-size: 13px;
+        justify-content: flex-start;
+    }
+
+    .pickup-time .icon{
+        width: 20px;
+        height: 20px;
+        margin-left: 11px;
+    }
+
+
+    /* carouasal cards section */
+    .carousel-inner, .carousel-item{
+        height: 216px;
+        justify-content: center;
+    }
+    
+    /* carousal caption */
+    .carousel-caption{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* description on the carousal */
+    .carousel-caption p{
+        margin: 0;
+        width: 80%;
+        font-size: 10px;
+        align-items: flex-start;
+    }
+
+    /* button on the carousal  */
+    .carousel-caption button{
+        border-radius: 0;
+        height: 16px;
+        font-size: 10px;
+        width: max-content;
+    }
+
+    /* cars slider section */
+    .popular-cars{
+        height: 100%;
+    }
+
+    .car-cards h2{
+        font-size: 16px;
+        font-weight: 500;
+        text-align: left;
+    }
+
+    /* each card about cars  */
+    .popular-cars .card{
+        flex-direction: column;
+        width: 207px;
+        height: 470px;
+    }
+
+    /* card photos  */
+    .car-photo{
+        width: 100% !important;
+        height: 127px !important;
+    }
+
+    /* about the car */
+    .card-description{
+        width: 188px;
+        text-align: justify;
+    }
+
+    .card-description h3{
+        font-size: 16px;
+    }
+
+    .card-description p{
+        font-size: 12px;
+        overflow-x: hidden;
+        height: 70px;
+        overflow-y: hidden;
+    }
+
+    /* details aboyt cars */
+    .car-details{
+        column-gap: 5px;
+        width: 190px;
+        overflow-x: hidden;
+    }
+    .car-details p{
+        width: max-content;
+        height: 17px;
+    }
+
+    .rate-and-book{
+        flex-direction: column;
+    }
+
+
+    /* subscribe section */
+    .subscribe{
+        width: 100%;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    /* main div of subscribe section */
+    .offers-subscribe{
+        margin-top:20px;
+    }
+
+    /* heading of section */
+    .offers-subscribe h2{
+        font-size: 16px;
+        text-align: left;
+        width: 227px;
+        font-weight: 500;
+    }
+
+    /* the form for email and name */
+    .name-email{
+        width: 100%;
+        flex-direction: column !important;
+        row-gap: 8px;
+    }
+
+    /* input for the subscribe form */
+    .name-email input{
+        width: 328px;
+        height: 50px;
+    }
+
+    /* paragraph in the form */
+    .subscribe-para{
+        font-size: 12px;
+        width: 328px;
+        height: 60px;
+    }
+
+    /* button for form submission */
+    .subscribe-form button{
+        width: 128px;
+        height: 38px;
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    /* Android app advertisement */
+    .app-downloadLink{
+        justify-content: center;
+        align-items: flex-start;
+        height: 390px;
+        width: 100%;
+    }
+
+    /* Mobile phone image */
+    .app-downloadLink img{
+        margin: 0;
+        width: 136px;
+        height: 245px;
+    }
+
+    /* link share through phone number  */
+    .link-share{
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    /* small contents on there  */
+    .link-share div p{
+        height: 50px;
+        font-size: 12px;
+        width: 143px;
+
+    }
+
+    .link-share button{
+        width: 120px;
+        height: 40px;
+
+    }
+
+    /* mobile number input */
+    .link-share input {
+        height: 30px;
+        width: 160px;
+    }
+
+    /* play store and app store liage */
+    .playstore-appstore{
+        flex-direction: column;
+    }
+
+    .playstore-appstore p{
+        margin-top: 20px;
+    }
+
+    .playstore-appstore img{
+        height: 30px;
+        width: 100px;
+    }
+
+    /* Rental steps section */
+
+    .rental-steps h2{
+        font-size: 16px;
+        text-align: left;
+        font-weight: 500;
+    }
+
+    /* three steps align direction */
+    .three-steps{
+        flex-direction: column;
+    }
+
+    /* id for the each block */
+    .step-id{
+        font-size: 28px;
+        width: 35px;
+        height: 35px;
+    }
+
+    /* each step block containing info */
+    .step-block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 167px;
+        width: 80%;
+    }
+
+    .step-block img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .step-block p{
+        font-size: 13px;
+        width: 210px;
+    }
+
+    /* Avialable locations */
+    .avialable-locations{
+        align-items: flex-start;
+        height: 200px;
+        width: 100%;
+    }
+
+    /* section main heading  */
+    .avialable-locations h2{
+        margin:20px 0 0 20px;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    /* location charts */
+    .our-locations{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2,100px);
+        column-gap: 30px;
+        row-gap: 20px;
+    }
+
+    /* hide vertical line betweens locations */
+    .vertical-line{
+        display: none;
+    }
+
+
+    /* loaction pin image  */
+    .each-location img{
+        width: 14px;
+        height: 17px;
+    }
+
+    /* location names */
+    .each-location p{
+        margin: 0;
+        font-size: 14px;
+    }
+
+
+    /* frequently asked questions and answers */
+    .FAQ{
+        padding: 0 10px 0 10px;
+    }
+
+    .faq-toggle{
+        font-size: 16px;
+    }
+
+    .faq-question span{
+        font-size: 14px;
+    }
+
+    .faq-container h2{
+        margin: 0 5px 0 5px;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: left;
+    }
+
+    /* faq question  */
+    .faq-question{
+        font-size: 13px !important;
+    }
+
+    /* faq answer  */
+    .faq-answer{
+        font-size: 12px !important;
+        padding: 5px 0 5px 0;
+    }
+
+
+    /* footer hided for the mobile view  */
+    .footer{
+        display: none;
+        
+    }
+
+    /* mobile footer */
+    .mobile-footer{
+        justify-content: center;
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    /* mobile footer light color section */
+    .footer-half-color{
+        background-color: #F6F7F9;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        padding: 20px;
+        width: 100vw;
+        position: relative;
+        align-items: center;
+        left: -20px;
+    }
+
+    /* heading of footer */
+    .footer-half-color .footer-heading{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 100px;
+    }
+
+    /* social media link list */
+    .social-media-mobile{
+        column-gap: 10px;
+    }
+
+    /* navigation list section */
+    .footer-nav-list li a{
+        text-decoration: none;
+        color: #000;
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+
+    .footer-nav-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .footer-nav-list li{
+        flex: 0 0 calc(25% - 10px);
+        font-size: 12px;
+        font-weight: 700;
+        text-align: center;
+        width: 100px;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* footer dark color section */
+    .black-color{
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 100vw;
+        position: relative;
+        align-items: center;
+        left: -20px;
+    }   
+
+    .parent-company-heading{
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .company-list-mobile{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .company-list-mobile li{
+        width: 100px;
+    }
+    .company-list-mobile li a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 400;
+        flex: 0 0 calc(25% - 10px);
+    }
+
+    .black-color img{
+        margin-bottom: 20px;
+    }
+
+
+    
+
+}
