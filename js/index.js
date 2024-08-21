@@ -321,7 +321,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
+//mobile view
 // book a car -block display while click on button
 document.getElementById('book-a-car').addEventListener("click",() => {
     document.getElementById('book-a-car').classList.toggle('book-a-car-active');
@@ -333,33 +333,8 @@ document.getElementById('book-a-car').addEventListener("click",() => {
 
 
 
-// to change drop location selection
-const sameAsPickup = document.getElementById('same-as-pickup');
-const differentPickup = document.getElementById('different-pickup');
-
-// event listner on same as pick up, it will hide drop off location selection
-sameAsPickup.addEventListener('click',() => {
-    sameAsPickup.classList.add('pickup-location-active');
-    differentPickup.classList.remove('pickup-location-active');
-    document.getElementById('drop-off-location').style.display = "none";
-})
-
-
-// event listner on different pick up, it will show drop off location selection
-differentPickup.addEventListener('click',() => {
-    differentPickup.classList.add('pickup-location-active');
-    sameAsPickup.classList.remove('pickup-location-active');
-    document.getElementById('drop-off-location').style.display = "flex";
-})
-
-
-
-
-
-
-
-
-
+//mobile view
+// hamburger menu
 document.getElementById('nav-control').addEventListener('click', () => { // to open navigation menu on mobile
     document.getElementById('navigation-menu').classList.add('nav-active');
 })
@@ -368,3 +343,69 @@ document.getElementById('nav-control').addEventListener('click', () => { // to o
 document.getElementById('navigation-close-button').addEventListener('click', () => { // to close navigation menu on mobile
     document.getElementById('navigation-menu').classList.remove('nav-active');
 })
+
+
+
+
+// Pickup Time Selection
+const dateTimeSelector = document.getElementById('dateTimeSelector');
+const dateTimePicker = document.getElementById('dateTimePicker');
+const setDateTimeButton = document.getElementById('setDateTime');
+const selectedDate = document.getElementById('selectedDate');
+const selectedTime = document.getElementById('selectedTime');
+
+dateTimeSelector.addEventListener('click', () => {
+    dateTimePicker.style.display = 'block';
+});
+
+setDateTimeButton.addEventListener('click', () => {
+    const dateInput = document.getElementById('dateInput').value;
+    const timeInput = document.getElementById('timeInput').value;
+
+    selectedDate.innerText = dateInput;
+    selectedTime.innerText = timeInput;
+
+    dateTimePicker.style.display = 'none';
+});
+
+// Arrival Time Selection
+const arrivalDateTimeSelector = document.getElementById('arrivalDateTimeSelector');
+const arrivalDateTimePicker = document.getElementById('arrivalDateTimePicker');
+const setArrivalDateTimeButton = document.getElementById('setArrivalDateTime');
+const selectedArrivalDate = document.getElementById('selectedArrivalDate');
+const selectedArrivalTime = document.getElementById('selectedArrivalTime');
+
+arrivalDateTimeSelector.addEventListener('click', () => {
+    arrivalDateTimePicker.style.display = 'block';
+});
+
+setArrivalDateTimeButton.addEventListener('click', () => {
+    const arrivalDateInput = document.getElementById('arrivalDateInput').value;
+    const arrivalTimeInput = document.getElementById('arrivalTimeInput').value;
+
+    selectedArrivalDate.innerText = arrivalDateInput;
+    selectedArrivalTime.innerText = arrivalTimeInput;
+
+    arrivalDateTimePicker.style.display = 'none';
+});
+
+
+
+// Elements
+const sameAsPickup = document.getElementById('same-as-pickup');
+const differentPickup = document.getElementById('different-pickup');
+const dropOffLocation = document.getElementById('drop-off-location');
+
+// Event listener for "Same as Pick-Up"
+sameAsPickup.addEventListener('click', () => {
+    sameAsPickup.classList.add('pickup-location-active');
+    differentPickup.classList.remove('pickup-location-active');
+    dropOffLocation.style.display = "none"; // Hide drop-off location
+});
+
+// Event listener for "Different Drop-Off"
+differentPickup.addEventListener('click', () => {
+    differentPickup.classList.add('pickup-location-active');
+    sameAsPickup.classList.remove('pickup-location-active');
+    dropOffLocation.style.display = "flex"; // Show drop-off location
+});

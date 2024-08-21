@@ -58,7 +58,7 @@
 
     <!-- Small text on the top -->
     <div class="small-p-at-top">
-        <p class="notice-data"> Sunday Pick Up/Drop-Off only at Dubai Silicon Oasis & Habtoor Grand Sales Counters | All Rates inclusive of VAT. T&C’s apply | Follow us on Social Media for New Offers</p>
+        <marquee behavior="scroll" direction="left" scrollamount="5"class="notice-data"> Sunday Pick Up/Drop-Off only at Dubai Silicon Oasis & Habtoor Grand Sales Counters | All Rates inclusive of VAT. T&C’s apply | Follow us on Social Media for New Offers</marquee>
     </div>
 
     <!-- Slide in call button -->
@@ -76,58 +76,73 @@
 
     <!-- booking section -->
     <section class="booking-section"> 
-        <!-- Qiuck pickup section -->
-        <div class="quick-pickup">
-            <div class="pickup-options">
-                <div class="options"><button class="pickup-link">Same as Pick-Up <span class="line"></span></button></div>
-                <div class="options"><button class="pickup-link">Different Drop-Off <span class="line"></span></button></div>
-                <!-- car selector -->
-                <select name="vehicle" id="" class="vehicle-type">
-                    <option value="" disabled selected style="display: none;" >Select vehicle type</option>
+          <!-- Quick pickup section -->
+    <div class="quick-pickup">
+        <div class="pickup-options">
+            <div class="options">
+                <button id="same-as-pickup" class="pickup-link pickup-location-active">Same as Pick-Up <span class="line"></span></button>
+            </div>
+            <div class="options">
+                <button id="different-pickup" class="pickup-link">Different Drop-Off <span class="line"></span></button>
+            </div>
+            <!-- Car selector -->
+            <select name="vehicle" id="" class="vehicle-type">
+                <option value="" disabled selected style="display: none;">Select vehicle type</option>
+            </select>
+        </div>
+
+        <!-- Location selector -->
+        <div class="additional-details">
+            <div class="location">
+                <img src="images/map-logo.svg" alt="" class="map-pin">
+                <select name="place" id="" class="location-list">
+                    <option value="al-quoz">Al Quoz</option>
                 </select>
             </div>
 
-            <!-- Location selector -->
-            <div class="additional-details">
-                <div class="location">
-                    <img src="images/map-logo.svg" alt="" class="map-pin"></i>
-                    <select name="place" id="" class="location-list">
-                        <option value="al-quoz">Al Quoz</option>
-                    </select>
-                </div>
+            <!-- Drop-off location selector -->
+            <div class="location" id="drop-off-location" style="display: none;">
+                <img src="images/map-logo.svg" alt="" class="map-pin">
+                <select name="place" class="location-list">
+                    <option value="" disabled selected>Drop-off location</option>
+                    <option value="al-quoz">Al Quoz</option>
+                </select>
+            </div>
 
 
-                <!-- pickup time -->
-                <div class="pickup-time" id="dateTimeSelector">
-                    <div class="icon">
-                        <img src="images/calenderlogo.svg" alt="Calendar Icon" class="calender-icon">
-                    </div>
-                    <div class="date-time">
-                        <span class="date" id="selectedDate">16/08/2024</span>
-                        <span class="time" id="selectedTime">09:00 Am</span>
-                    </div>
-                    <div class="date-time-picker" id="dateTimePicker" style="display: none;">
-                        <input type="date" id="dateInput">
-                        <input type="time" id="timeInput">
-                        <button id="setDateTime">Set</button>
-                    </div>
-                </div>
 
-                <!-- Arrival time -->
-                <div class="pickup-time" id="arrivalDateTimeSelector">
-                    <div class="icon">
-                        <img src="images/calenderlogo.svg" alt="Calendar Icon" class="calender-icon">
+                <!-- Pickup Time -->
+                    <div class="pickup-time" id="dateTimeSelector">
+                        <div class="icon">
+                            <img src="images/calenderlogo.svg" alt="Calendar Icon" class="calender-icon">
+                        </div>
+                        <div class="date-time" id="pickupDateTimeDisplay">
+                            <span class="date" id="selectedDate">16/08/2024</span>
+                            <span class="time" id="selectedTime">09:00 AM</span>
+                        </div>
+                        <div class="date-time-picker" id="dateTimePicker" style="display: none;">
+                            <input type="date" id="dateInput">
+                            <input type="time" id="timeInput">
+                            <button id="setDateTime">Set</button>
+                        </div>
                     </div>
-                    <div class="date-time">
-                        <span class="date" id="selectedArrivalDate">17/08/2024</span>
-                        <span class="time" id="selectedArrivalTime">10:00 AM</span>
+
+                    <!-- Arrival Time -->
+                    <div class="pickup-time" id="arrivalDateTimeSelector">
+                        <div class="icon">
+                            <img src="images/calenderlogo.svg" alt="Calendar Icon" class="calender-icon">
+                        </div>
+                        <div class="date-time" id="arrivalDateTimeDisplay">
+                            <span class="date" id="selectedArrivalDate">17/08/2024</span>
+                            <span class="time" id="selectedArrivalTime">10:00 AM</span>
+                        </div>
+                        <div class="arrival-date-time-picker" id="arrivalDateTimePicker" style="display: none;">
+                            <input type="date" id="arrivalDateInput">
+                            <input type="time" id="arrivalTimeInput">
+                            <button id="setArrivalDateTime">Set</button>
+                        </div>
                     </div>
-                    <div class="arrival-date-time-picker" id="arrivalDateTimePicker" style="display: none;">
-                        <input type="date" id="dateInput">
-                        <input type="time" id="timeInput">
-                        <button id="setDateTime">Set</button>
-                    </div>
-                </div>
+
 
 
                 <!-- Search button -->
@@ -154,10 +169,10 @@
                 </p>
                 <div>
                     <a href="">
-                        <img src="./assets/photos/icons/appstore.svg" alt="">
+                        <img src="images/appstore.svg" alt="">
                     </a>
                     <a href="">
-                        <img src="./assets/photos/icons/playstore.svg" alt="">
+                        <img src="images/playstore.svg" alt="">
                     </a>
                 </div>
             </div>
@@ -168,75 +183,81 @@
     </section>
     <!-- booking class section ends -->
 
-    <!-- booking for mobile hided by default -->
-    <div class="booking-buttons-for-mobile" style="display: none;">
-        <button id="book-a-car">Book a car</button>
-        <button id="quick-book">Quick book</button>
-    </div>
-
-
-    <!-- Pickup options for mobile  -->
-    <div class="mobile-pickup-options" style="display: none;" id="mobile-pickup-options">
-        <div class="primary-pickup-details">
-            <span  id="same-as-pickup">Same as pickup</span>
-            <span class="pickup-location-active" id="different-pickup">Different Pickup</span>
-            <select name="vehicle" id="" class="vehicle-type">
-                <option value="" disabled selected style="display: none;" >Select vehicle type</option>
-                
-            </select>
-        </div>
-        <!-- pickup location selector -->
-        <div class="location">
-            <img src="images/map-logo.svg" alt="" class="map-pin"></i>
-            <select name="place" id="" class="location-list">
-                <option value="" disabled selected>Pick-up location</option>
-                <option value="al-quoz">Al Quoz</option>
-            </select>
+        <!-- booking for mobile hided by default -->
+        <div class="booking-buttons-for-mobile" style="display: none;">
+            <button id="book-a-car">Book a car</button>
+            <button id="quick-book">Quick book</button>
         </div>
 
-        <!-- drop off location selector -->
-        <div class="location" id="drop-off-location">
-            <img src="images/map-logo.svg" alt="" class="map-pin"></i>
-            <select name="place" id="" class="location-list">
-                <option value="" disabled selected>Drop off location</option>
-                <option value="al-quoz">Al Quoz</option>
-            </select>
-        </div>
 
-        <!-- pickup time -->
-        <div class="pickup-time">
-            <div class="icon">
-                <img src="images/calenderlogo.svg" alt="Calendar Icon" class="calender-icon">
+        <!-- Pickup options for mobile  -->
+        <div class="mobile-pickup-options" style="display: none;" id="mobile-pickup-options">
+            <div class="primary-pickup-details">
+                <span  id="same-as-pickup">Same as pickup</span>
+                <span class="pickup-location-active" id="different-pickup">Different Pickup</span>
+                <select name="vehicle" id="" class="vehicle-type">
+                    <option value="" disabled selected style="display: none;" >Select vehicle type</option>
+                    
+                </select>
             </div>
-            <div class="date-time">
-                <span class="date" id="selectedDate">Pick-up Date & Time</span>
+        
+
+            <!-- pickup location selector -->
+            <div class="location">
+                <img src="images/map-logo.svg" alt="" class="map-pin"></i>
+                <select name="place" id="" class="location-list">
+                    <option value="" disabled selected>Pick-up location</option>
+                    <option value="al-quoz">Al Quoz</option>
+                </select>
             </div>
+            <!-- pickup location selector ends -->
+
+            <!-- drop off location selector -->
+            <div class="location" id="drop-off-location">
+                <img src="images/map-logo.svg" alt="" class="map-pin"></i>
+                <select name="place" id="" class="location-list">
+                    <option value="" disabled selected>Drop off location</option>
+                    <option value="al-quoz">Al Quoz</option>
+                </select>
+            </div>
+            <!-- drop off ends -->
+
+            <!-- pickup time -->
+            <div class="pickup-time">
+                <div class="icon">
+                    <img src="images/calenderlogo.svg" alt="Calendar Icon" class="calender-icon">
+                </div>
+                <div class="date-time">
+                    <span class="date" id="selectedDate">Pick-up Date & Time</span>
+                </div>
+            </div>
+            <!-- pickup ends -->
+
+            <!-- Arrival time -->
+            <div class="pickup-time">
+                <div class="icon">
+                    <img src="images/calenderlogo.svg" alt="Calendar Icon" class="calender-icon">
+                </div>
+                <div class="date-time">
+                    <span class="date" id="selectedArrivalDate">Drop off Time & Date</span>
+                </div>
+            </div>
+            <!-- arrival ends -->
+
+            <button class="search-vehicle">Search</button>
+
         </div>
-
-        <!-- Arrival time -->
-        <div class="pickup-time">
-            <div class="icon">
-                <img src="./assets/photos/icons/calender.svg" alt="Calendar Icon" class="calender-icon">
-            </div>
-            <div class="date-time">
-                <span class="date" id="selectedArrivalDate">Drop off Time & Date</span>
-            </div>
-        </div>
-
-        <button class="search-vehicle">Search</button>
-
-    </div>
 
 
     <!-- Carousel section -->
     <section class="carousel">
         <div class="carousel-inner" id="carouselInner">
-            <!-- Slides will be dynamically injected here -->
+            <!-- Slides will be dynamically added here -->
         </div>
     
         <!-- Indicators -->
         <div class="carousel-indicators" id="carouselIndicators">
-            <!-- Indicators will be dynamically injected here -->
+            <!-- Indicators will be dynamically added here -->
         </div>
     </section>
 
