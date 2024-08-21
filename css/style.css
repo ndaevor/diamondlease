@@ -135,6 +135,7 @@ ul li a{
     font-size: 10px;
     color: #adb5bd;
     margin: 0; 
+    text-align: right;
 }
 
 
@@ -142,16 +143,16 @@ ul li a{
 .slide-in-button-1{
     position: absolute;
     right: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     top: 151px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     width: 50px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 20px 20px 0px;
-    margin-right: 5px;
+    /* margin-right: 5px; */
     border-radius: 20px 0px 0px 20px;
     background: transparent;
-    transition: width 0.3s ease;
+    /* transition: width 0.3s ease; */
     
 }
 
@@ -159,13 +160,13 @@ ul li a{
 .slide-in-contents{
     background-color: #fff;
     height: 45px;
-    width: 200px;
-    display: flex;
+    /* width: 200px; */
+    /* display: flex; */
     border-radius: 20px;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     column-gap: 20px;
-    flex-direction: row;
+    /* flex-direction: row; */
     outline: none;
     border: none;
 }
@@ -177,9 +178,7 @@ ul li a{
     width: 25px;
 }
 
-.slide-in-contents p{
-    margin: 0;
-}
+
 
 
 .slide-in-button-2{
@@ -590,7 +589,7 @@ option {
 .rate-and-book{
     padding: 0;
     display: flex;
-    align-items: center;
+    align-items: left;
     flex-direction: row;
     width: 100%;
     column-gap: calc(4.44vw);
@@ -610,6 +609,7 @@ option {
     border: none;
     border-radius: 4px;
     color: #fff;
+    margin-top: 10px;
 }
 
 
@@ -633,11 +633,12 @@ option {
     align-items: center;
     column-gap: 5px;
     width: max-content;
+    
 }
 
 .car-details div p{
     margin: 0;
-    font-size: 11px;
+    font-size: 8px;
 }
 
 
@@ -1204,6 +1205,10 @@ h2 {
         left: 20px;
         right: 20px;
     }
+
+    .small-p-at-top{
+        display: none;
+    }
     
 
     
@@ -1252,10 +1257,7 @@ h2 {
         transition: width 0.4s ease, left 0.4s ease;
     }
 
-    .slide-in-button-1:hover ,.slide-in-button-2:hover{
-        width: 400px;
-        left: 150px;
-    }
+    
 
     /* section with red back ground */
     .quick-pickup{
@@ -1416,7 +1418,7 @@ h2 {
     .popular-cars .card{
         flex-direction: column;
         width: 207px;
-        height: 470px;
+        height: auto;
     }
 
     /* card photos  */
@@ -1455,7 +1457,15 @@ h2 {
 
     .rate-and-book{
         flex-direction: column;
+        margin-bottom: 5px;
+        align-items: left;
+
+        
     }
+    /* .rate-and-book h2{
+        padding-left: 2px;
+        
+    } */
 
 
     /* subscribe section */

@@ -1,6 +1,4 @@
 
-
-
 //Dynamic carousal
 const images = [
     {
